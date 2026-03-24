@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Phone, Menu, X } from 'lucide-react'
+import Logo2 from '../assets/Logo2.png'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -27,8 +28,7 @@ function Header() {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <Link to="/" className="logo">
-          <span className="logo-text">ARWAN</span>
-          <span className="logo-subtitle">Montage & Gebäudereinigung</span>
+          <img src={Logo2} alt="ARWAN Montage & Gebäudereinigung" className="logo-img" />
         </Link>
         
         <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
@@ -36,6 +36,7 @@ function Header() {
           <Link to="/leistungen" className={isActive('/leistungen') ? 'active' : ''}>Leistungen</Link>
           <Link to="/ueber-uns" className={isActive('/ueber-uns') ? 'active' : ''}>Über uns</Link>
           <Link to="/einsatzgebiete" className={isActive('/einsatzgebiete') ? 'active' : ''}>Einsatzgebiete</Link>
+          <Link to="/galerie" className={isActive('/galerie') ? 'active' : ''}>Galerie</Link>
           <Link to="/kontakt" className={isActive('/kontakt') ? 'active' : ''}>Kontakt</Link>
         </nav>
 

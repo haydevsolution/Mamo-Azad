@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import Logo2 from '../assets/Logo2.png'
 
 function Footer() {
   return (
@@ -8,8 +9,7 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="logo">
-              <span className="logo-text">ARWAN</span>
-              <span className="logo-subtitle">Montage & Gebäudereinigung</span>
+              <img src={Logo2} alt="ARWAN Montage & Gebäudereinigung" className="logo-img" />
             </Link>
             <p>Ihr Spezialist für Gebäudereinigung & Montageleistungen in und im Umkreis von Heilbronn</p>
           </div>
@@ -31,6 +31,7 @@ function Footer() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/leistungen">Leistungen</Link></li>
               <li><Link to="/ueber-uns">Über uns</Link></li>
+              <li><Link to="/galerie">Galerie</Link></li>
               <li><Link to="/kontakt">Kontakt</Link></li>
               <li><Link to="/impressum">Impressum</Link></li>
               <li><Link to="/datenschutz">Datenschutz</Link></li>
